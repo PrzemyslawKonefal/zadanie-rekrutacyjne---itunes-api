@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { SongsService } from '../../songs.service';
 @Component({
   selector: 'app-record',
   templateUrl: './record.component.html',
@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecordComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private songs:SongsService) { }
+  @Input() trackData:object;
   ngOnInit() {
   }
 

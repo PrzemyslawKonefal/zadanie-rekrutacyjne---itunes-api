@@ -13,13 +13,12 @@ export class SearchComponent implements OnInit {
   constructor(private Songs:SongsService, private http:HttpClient) { }
 
   getSongs(){
-    const songNameInput = (<HTMLInputElement>document.getElementById('songSearchInput')).value;
-    songNameInput = songNameInput.replace(/ /g, '+');
-    console.log(songNameInput);
-    this.http.get(`https://itunes.apple.com/search?term=${songNameInput}&entity=song&limit=200`)
+    let inputedExpression = (<HTMLInputElement>document.getElementById('songSearchInput')).value;
+    inputedExpression = inputedExpression.replace(/ /g, '+');
+    this.http.get(`https://itunes.apple.com/search?term=${inputedExpression}&entity=song&limit=200`)
     .subscribe(
       (data) => {
-        this.Songs.changeSongs(data);
+        this.Songs.updateSongs(data);
       }
     )
   }

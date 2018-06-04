@@ -1,3 +1,17 @@
-<p>
-  records works!
-</p>
+<section *ngIf = "songs.songsUpdated">
+  <div *ngIf = "songs.list['resultCount']">
+    <h5>Records found: {{songs.list['resultCount']}}</h5>
+    <div>
+      <app-record
+       *ngFor = "let track of displayedTracks"
+       [trackData] = "track"></app-record>
+    </div>
+    <div class="paginationBox">
+      <button (click) = "changeTracks('previous')"
+       [disabled] = "displayedTracksIndexes[0] <= 0" >Previous</button>
+      <button (click) = "changeTracks('next')"
+       [disabled] = "displayedTracksIndexes[1] >= songs.list['resultCount']">Next</button>
+    </div>
+  </div>
+  <p *ngIf = "songs.list['resultCount']===0"> Sorry, no matches found.</p>
+</section>
