@@ -4,10 +4,14 @@
   justify-content: center;
   color: #000;
 }
+.inner-records{
+  width: 100%;
+}
 .main-wrap-records{
+  max-height: 1020px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: baseline;
+  justify-content: center;
 }
 .paginationBox{
   display: flex;
@@ -36,7 +40,7 @@
   font-size: 14px;
   margin: 9px 0 0 0;
 }
-.no-matches-paragraph{
+.informing-paragraph{
   margin-top: 40px;
   font-size: 30px;
 }

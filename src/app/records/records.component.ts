@@ -7,7 +7,7 @@ import { SongsService } from '../songs.service';
   styleUrls: ['./records.component.css']
 })
 export class RecordsComponent implements OnInit {
-  constructor(private songs:SongsService) {  }
+  constructor(public songs:SongsService) {  }
   displayedTracks:object[];
   displayedTracksIndexes:number[] = [0, 9];
   updateVisibleTracks(){
