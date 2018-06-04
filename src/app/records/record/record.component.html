@@ -1,5 +1,5 @@
 <div>
-  <img [src] = "trackData['artworkUrl100']" alt="">
+  <img [src] = "trackData['artworkUrl100']" [alt]="trackData['trackName']">
   <h6 class="trackTitle">{{trackData['trackName']}}</h6>
   <h6 class="trackAuthor">{{trackData['artistName']}}</h6>
 </div>
