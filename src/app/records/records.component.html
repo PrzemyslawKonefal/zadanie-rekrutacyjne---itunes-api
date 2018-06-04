@@ -1,17 +1,17 @@
-<section *ngIf = "songs.songsUpdated">
-  <div *ngIf = "songs.list['resultCount']">
-    <h5>Records found: {{songs.list['resultCount']}}</h5>
-    <div>
+<section *ngIf = "songs.songsUpdated" class = "container section-records">
+  <div *ngIf = "songs.list['resultCount']" class="inner-records">
+    <p class="song-counter">Found {{songs.list['resultCount']}} songs</p>
+    <div class="main-wrap-records">
       <app-record
        *ngFor = "let track of displayedTracks"
        [trackData] = "track"></app-record>
     </div>
     <div class="paginationBox">
       <button (click) = "changeTracks('previous')"
-       [disabled] = "displayedTracksIndexes[0] <= 0" >Previous</button>
+       [disabled] = "displayedTracksIndexes[0] <= 0" >< < prev</button>
       <button (click) = "changeTracks('next')"
-       [disabled] = "displayedTracksIndexes[1] >= songs.list['resultCount']">Next</button>
+       [disabled] = "displayedTracksIndexes[1] >= songs.list['resultCount']">next > ></button>
     </div>
   </div>
-  <p *ngIf = "songs.list['resultCount']===0"> Sorry, no matches found.</p>
+  <p *ngIf = "songs.list['resultCount']===0" class="no-matches-paragraph"> Sorry, no matches found.</p>
 </section>

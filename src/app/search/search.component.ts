@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { SongsService } from '../songs.service';
 
-
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -23,8 +22,6 @@ export class SearchComponent implements OnInit {
     )
   }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
 }

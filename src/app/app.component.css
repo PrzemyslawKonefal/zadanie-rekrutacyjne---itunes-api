@@ -1,7 +1,37 @@
 .navbar{
   width: 100%;
-  height: 61.5px;
+  height: 62px;
 }
 .navbar > img{
   height: 52px;
+}
+.footer{
+  background: #2d2d2d;
+  color: #fff;
+  width: 100%;
+  height: 66px;
+  text-align: center;
+}
+.footer p{
+  font-size: 18px;
+  position: relative;
+  line-height: 66px;
+  margin: 0;
+}
+.footer p::before, .footer p::after{
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 1px;
+  background: #fff;
+  top: 50%;
+}
+.footer p::before{
+  transform: translateX(-130%);
+}
+.footer p::after{
+  transform: translateX(30%);
+}
+main{
+  min-height: calc(100vh - 128px);
 }

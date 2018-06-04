@@ -6,14 +6,16 @@
   color: #fff;
   background: #2d2d2d;
   height: 204px;
+  text-align: center;
 }
 .header-search > h1{
   font-size: 26px;
   font-weight: 600;
 }
 .header-search > p{
-  font-weight: 100;
   font-size: 14px;
+  color: #dbdbdb;
+  padding: 0 5px;
 }
 .search{
   display: flex;
@@ -23,6 +25,7 @@
   height: 40px;
   border: none;
   outline: none;
+  transition: .3s ease;
 }
 .search > button{
   background: #f7941d;
@@ -31,11 +34,19 @@
   border-radius: 0 20px 20px 0;
   width: 80px;
   cursor: pointer;
+  line-height: 100%;
+  position: relative;
+}
+.search > button:hover{
+  letter-spacing: 2px;
+}
+.search > input:focus{
+  background: #fff;
 }
 .search > input{
   color: #3c3b3b;
   background: #f0f0f0;
   border-radius: 20px 0 0 20px;
   width: 190px;
-  padding-left: 20px;
+  padding: 0 10px 0 20px;
 }

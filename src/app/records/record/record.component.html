@@ -1,5 +1,7 @@
-<div>
+<div class="record">
   <img [src] = "trackData['artworkUrl100']" [alt]="trackData['trackName']">
-  <h6 class="trackTitle">{{trackData['trackName']}}</h6>
-  <h6 class="trackAuthor">{{trackData['artistName']}}</h6>
+  <div class="wrapper-right-full-height">
+  <div class="header-position-setter"> <h6 class="trackTitle">{{trackData['trackName']}}</h6></div>
+  <h6 class="trackAuthor"><span>By </span>{{trackData['artistName']}}</h6>
+  </div>
 </div>
