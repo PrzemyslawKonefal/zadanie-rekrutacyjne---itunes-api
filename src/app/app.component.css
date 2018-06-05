@@ -4,6 +4,7 @@
 }
 .navbar > img{
   height: 52px;
+  transform: translateX(100%);
 }
 .footer{
   background: #2d2d2d;
@@ -34,4 +35,19 @@
 }
 main{
   min-height: calc(100vh - 128px);
+}
+@media only screen and (max-width: 1199px){
+  .navbar > img{
+    transform: translateX(180%);
+  }
+}
+@media only screen and (max-width: 991px){
+  .navbar > img{
+    transform: translateX(50%);
+  }
+}
+@media only screen and (max-width: 767px){
+  .navbar > img{
+    transform: none;
+  }
 }

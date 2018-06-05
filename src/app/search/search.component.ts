@@ -10,7 +10,6 @@ import { SongsService } from '../songs.service';
 export class SearchComponent implements OnInit {
 
   constructor(private Songs:SongsService, private http:HttpClient) { }
-
   getSongs(){
     let inputedExpression = (<HTMLInputElement>document.getElementById('songSearchInput')).value;
     inputedExpression = inputedExpression.replace(/ /g, '+');

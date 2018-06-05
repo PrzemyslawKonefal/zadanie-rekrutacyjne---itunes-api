@@ -10,9 +10,11 @@ export class RecordsComponent implements OnInit {
   constructor(public songs:SongsService) {  }
   displayedTracks:object[];
   displayedTracksIndexes:number[] = [0, 9];
+
   updateVisibleTracks(){
     this.displayedTracks = this.songs.list['results'].slice(this.displayedTracksIndexes[0], this.displayedTracksIndexes[1]);
   }
+
   changeTracks(direction:string){
     direction === 'next' ?  this.displayedTracksIndexes = this.displayedTracksIndexes.map((index) => {return index+9}):
                             this.displayedTracksIndexes = this.displayedTracksIndexes.map((index) => {return index-9});
@@ -25,6 +27,6 @@ export class RecordsComponent implements OnInit {
         this.displayedTracksIndexes = [0, 9];
         this.updateVisibleTracks();
       }
-    )
+    );
   }
 }
